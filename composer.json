@@ -16,7 +16,7 @@
   },
   "autoload" : {
     "psr-0" : {
-      "TripleI\\C5BseModel": "src"
+      "TripleI\\C5BaseModel": "src"
     }
   }
 }
