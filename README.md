@@ -20,8 +20,6 @@ class Widget extends BaseModel
      * @Column(type="text", nullable=true)
      */
     protected $description;
-    
-    
 }
 
 $widget = new Widget();
