@@ -1,0 +1,22 @@
+{
+  "name": "triplei/c5_base_model",
+  "license": "MIT",
+  "description": "A base model class for interacting with the database",
+  "keywords" :["concrete5"],
+  "authors" : [
+    {
+      "name": "Dan Klassen",
+      "email": "dan@triplei.ca",
+      "homepage": "http://www.triplei.ca",
+      "role": "developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0"
+  },
+  "autoload" : {
+    "psr-0" : {
+      "TripleI\\C5BseModel": "src"
+    }
+  }
+}
