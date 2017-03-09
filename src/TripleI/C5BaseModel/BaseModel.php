@@ -205,6 +205,31 @@ class BaseModel
 
         return $repository->findBy(array(), $sort);
     }
+    
+    /**
+     * get the newest (ordered by ID YRMV) record in the database
+     *
+     * return static
+     */
+    public static function getLast()
+    {
+        $em = static::getEntityManager();
+        $repository = $em->getRepository(get_called_class());
+        return $repository->findOneBy([], ['id' => 'DESC']);
+    }
+
+    /**
+     * get the most recent entries in the DB (ordered by ID descending)
+     * @param int $num number to get
+     *
+     * @return static[]
+     */
+    public static function getRecent($num = 20)
+    {
+        $em = static::getEntityManager();
+        $repository = $em->getRepository(get_called_class());
+        return $repository->findBy([], ['id' => 'DESC'], $num);
+    }
 
     /**
      * convert a string from underscore_form to CamelCase form
